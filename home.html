@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fashion Design Web Page</title>
+  <style>
+    /* Reset some default styles */
+    body, h1, h2, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Set a background color for the entire page */
+    body {
+      background-color: #b9e99a;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style the header */
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* Style the navigation menu */
+    nav {
+      background-color: #333;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    /* Style the main content */
+    main {
+      padding: 20px;
+    }
+
+    /* Style the gallery images */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    /* Style the image modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 50px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal img {
+      display: block;
+      margin: 0 auto;
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #ccc;
+    }
+
+    /* Style the footer */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fashion Designer</h1>
+  </header>
+  <nav>
+    
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html">Booking</a>
+  </nav>
+  <main>
+    <h2>Welcome to My Fashion Designs</h2>
+    <div class="gallery">
+      <img src="p1.jpg" alt="Design 1" onclick="showImageModal('image1.jpg', 'Design 1')">
+      <img src="p2.jpg" alt="Design 2" onclick="showImageModal('image2.jpg', 'Design 2')">
+      <img src="p3.jpg" alt="Design 3" onclick="showImageModal('image3.jpg', 'Design 3')">
+      <!-- Add more images here -->
+    </div>
+  </main>
+  <footer>
+    &copy; 2023 Fashion Designer. All rights reserved.
+  </footer>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img id="modalImage" src="" alt="Modal Image">
+    <div id="caption"></div>
+  </div>
+
+  
+</body>
+</html>
